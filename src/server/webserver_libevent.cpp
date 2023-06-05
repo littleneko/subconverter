@@ -254,7 +254,7 @@ static void on_request(evhttp_request *req, void *args)
             request.headers.emplace(kv->key, kv->value);
         kv = kv->next.tqe_next;
     }
-    request.headers.emplace("X-Client-IP", client_ip);
+    //request.headers.emplace("X-Client-IP", client_ip);
 
     std::string return_data;
     int retVal = process_request(server, request, response, return_data);
